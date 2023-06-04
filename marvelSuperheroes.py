@@ -130,9 +130,9 @@ def create_run_checkpoint_and_get_results(datasource_name, data_connector_name, 
 
 
 if __name__ == "__main__":
-    datasets_list = ["marvel_characters_info"]
-                    # ["characters_stats"
-                     # ,"charactersToComics", "characters", "marvel_characters_info", "marvel_dc_characters", "superheroes_power_matrix"]
+    datasets_list =["characters_stats" ,"charactersToComics", "characters", "marvel_characters_info", "marvel_dc_characters", "superheroes_power_matrix"]
+
+    # ["marvel_characters_info"]
 
     for dataset in datasets_list:
         data_asset_name=schema_name+"."+dataset

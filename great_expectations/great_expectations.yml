@@ -17,15 +17,15 @@ datasources:
   my_postgres:
     data_connectors:
       postgres_data_connector:
-        class_name: InferredAssetSqlDataConnector
-        module_name: great_expectations.datasource.data_connector
         include_schema_name: true
-    class_name: Datasource
+        module_name: great_expectations.datasource.data_connector
+        class_name: InferredAssetSqlDataConnector
     execution_engine:
-      class_name: SqlAlchemyExecutionEngine
-      connection_string: postgresql+psycopg2://postgres:Shellsharma%4092@localhost:5432/postgres
       module_name: great_expectations.execution_engine
+      connection_string: postgresql+psycopg2://postgres:<password>@localhost:5432/postgres
+      class_name: SqlAlchemyExecutionEngine
     module_name: great_expectations.datasource
+    class_name: Datasource
 config_variables_file_path: uncommitted/config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
@@ -88,11 +88,11 @@ data_docs_sites:
       class_name: DefaultSiteIndexBuilder
 
 anonymous_usage_statistics:
-  enabled: true
   data_context_id: d10020f8-85d6-4207-962a-7b9c8d9b6d60
+  enabled: true
 include_rendered_content:
   expectation_suite: false
-  globally: false
   expectation_validation_result: false
+  globally: false
 notebooks:
 fluent_datasources:
