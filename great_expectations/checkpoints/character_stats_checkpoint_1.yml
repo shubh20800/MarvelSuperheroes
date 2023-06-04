@@ -1,0 +1,51 @@
+name: character_stats_checkpoint_1
+config_version: 1.0
+template_name:
+module_name: great_expectations.checkpoint
+class_name: SimpleCheckpoint
+run_name_template:
+expectation_suite_name: postgres_test_suite_1
+batch_request:
+  _datasource_name: my_postgres
+  _data_connector_name: postgres_data_connector
+  _data_asset_name: public.characters_stats
+  _data_connector_query:
+  _limit:
+  _runtime_parameters:
+  _batch_identifiers:
+  _batch_spec_passthrough:
+action_list:
+  - name: send_email_on_validation_result # name can be set to any value
+    action:
+      class_name: EmailAction
+      notify_on: all # possible values: "all", "failure", "success"
+      notify_with: # optional list containing the DataDocs sites to include in the notification. Defaults to including links to all configured sites.
+      # You can choose between using SSL encryption, TLS encryption or none of them (not advised)
+      use_tls: False
+      use_ssl: True
+      renderer:
+        module_name: great_expectations.render.renderer.email_renderer
+        class_name: EmailRenderer
+      # put the actual following information in the uncommitted/config_variables.yml file
+      # or pass in as environment variable
+      smtp_address: smtp.gmail.com
+      smtp_port: 465
+      sender_login: shubh.sharma2080@gmail.com
+      sender_password: Shellsharma@92
+      sender_alias: SSharma
+      receiver_emails: shubham.sharma208008@gmail.com  # string containing email addresses separated by commas
+  - name: store_validation_result
+    action:
+      class_name: StoreValidationResultAction
+  - name: store_evaluation_params
+    action:
+      class_name: StoreEvaluationParametersAction
+  - name: update_data_docs
+    action:
+      class_name: UpdateDataDocsAction
+evaluation_parameters: {}
+runtime_configuration: {}
+validations: []
+profilers: []
+ge_cloud_id:
+expectation_suite_ge_cloud_id:
