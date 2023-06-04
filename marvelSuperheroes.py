@@ -21,7 +21,7 @@ def create_data_context():
         "execution_engine": {
             "class_name": "SqlAlchemyExecutionEngine",
             "module_name": "great_expectations.execution_engine",
-            "connection_string": "postgresql+psycopg2://postgres:Shellsharma%4092@localhost:5432/postgres"
+            "connection_string": "postgresql+psycopg2://postgres:<password>@localhost:5432/postgres"
         },
         "data_connectors": {
             "postgres_data_connector": {
