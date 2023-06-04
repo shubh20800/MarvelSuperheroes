@@ -1,0 +1,1 @@
+* 5 * * * cd /Users/shubhamsharma/PycharmProjects/pythonProject/venv/ && /Users/shubhamsharma/PycharmProjects/pythonProject/venv/bin/python3.9 marvelSuperheroes.py>> /Users/shubhamsharma/PycharmProjects/pythonProject/venv/cron/cronlogs.txt 2>&1

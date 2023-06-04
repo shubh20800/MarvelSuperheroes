@@ -1,0 +1,5 @@
+great_expectations
+pyscopg2
+psycopg2-binary
+PyYAML
+SQLAlchemy

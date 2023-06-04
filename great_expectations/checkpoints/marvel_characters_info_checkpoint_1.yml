@@ -1,14 +1,14 @@
-name: character_stats_checkpoint_1
+name: marvel_characters_info_checkpoint_1
 config_version: 1.0
 template_name:
 module_name: great_expectations.checkpoint
 class_name: SimpleCheckpoint
 run_name_template:
-expectation_suite_name: postgres_test_suite_1
+expectation_suite_name: marvel_characters_info_postgres_test_suite
 batch_request:
   _datasource_name: my_postgres
   _data_connector_name: postgres_data_connector
-  _data_asset_name: public.characters_stats
+  _data_asset_name: public.marvel_characters_info
   _data_connector_query:
   _limit:
   _runtime_parameters:

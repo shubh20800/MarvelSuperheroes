@@ -13,9 +13,20 @@ config_version: 3.0
 # Datasources tell Great Expectations where your data lives and how to get it.
 # You can use the CLI command `great_expectations datasource new` to help you
 # add a new datasource. Read more at https://docs.greatexpectations.io/docs/guides/connecting_to_your_data/connect_to_data_overview
-datasources: {}
-
-config_variables_file_path: great_expectations/uncommitted/config_variables.yml
+datasources:
+  my_postgres:
+    data_connectors:
+      postgres_data_connector:
+        class_name: InferredAssetSqlDataConnector
+        module_name: great_expectations.datasource.data_connector
+        include_schema_name: true
+    class_name: Datasource
+    execution_engine:
+      class_name: SqlAlchemyExecutionEngine
+      connection_string: postgresql+psycopg2://postgres:Shellsharma%4092@localhost:5432/postgres
+      module_name: great_expectations.execution_engine
+    module_name: great_expectations.datasource
+config_variables_file_path: uncommitted/config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
 # used to override and extend Great Expectations.
@@ -77,11 +88,11 @@ data_docs_sites:
       class_name: DefaultSiteIndexBuilder
 
 anonymous_usage_statistics:
-  data_context_id: 182e40bd-f3cf-4861-9f60-1b72b2c1d01f
   enabled: true
+  data_context_id: d10020f8-85d6-4207-962a-7b9c8d9b6d60
 include_rendered_content:
-  expectation_validation_result: false
-  globally: false
   expectation_suite: false
+  globally: false
+  expectation_validation_result: false
 notebooks:
 fluent_datasources:
