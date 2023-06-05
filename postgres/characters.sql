@@ -13,3 +13,4 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.characters
     OWNER to postgres;
+    
