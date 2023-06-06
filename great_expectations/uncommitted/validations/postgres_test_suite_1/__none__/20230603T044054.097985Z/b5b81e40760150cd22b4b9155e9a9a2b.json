@@ -1,0 +1,730 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "public.characters_stats",
+      "data_connector_name": "postgres_data_connector",
+      "datasource_name": "my_postgres"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230603T044054.104096Z"
+    },
+    "batch_spec": {
+      "batch_identifiers": {},
+      "data_asset_name": "public.characters_stats",
+      "data_asset_name_prefix": "",
+      "data_asset_name_suffix": "",
+      "include_schema_name": true,
+      "schema_name": "public",
+      "table_name": "characters_stats",
+      "type": "table"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "character_stats_checkpoint_1",
+    "expectation_suite_name": "postgres_test_suite_1",
+    "great_expectations_version": "0.16.15",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2023-06-03T10:10:54.097985+05:30"
+    },
+    "validation_id": null,
+    "validation_time": "20230603T044054.111974Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Name"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "Nova"
+          }
+        ],
+        "partial_unexpected_list": [
+          "Nova",
+          "Nova"
+        ],
+        "unexpected_count": 2,
+        "unexpected_percent": 0.32733224222585927,
+        "unexpected_percent_nonmissing": 0.32733224222585927,
+        "unexpected_percent_total": 0.32733224222585927
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Name"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Alignment"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [
+          {
+            "count": 3,
+            "value": null
+          }
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 3,
+        "unexpected_percent": 0.4909983633387889
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Alignment",
+          "value_set": [
+            "good",
+            "bad",
+            "neutral"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "missing_count": 3,
+        "missing_percent": 0.4909983633387889,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_ordered_list",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column_list": [
+            "Name",
+            "Alignment",
+            "Intelligence",
+            "Strength",
+            "Speed",
+            "Durability",
+            "Power",
+            "Combat",
+            "Total"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "Name",
+          "Alignment",
+          "Intelligence",
+          "Strength",
+          "Speed",
+          "Durability",
+          "Power",
+          "Combat",
+          "Total"
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "auto": true,
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Intelligence",
+          "max_value": 44.50245499181669,
+          "min_value": 44.50245499181669,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_config": {
+            "class_name": "BaseRuleBasedProfiler",
+            "config_version": 1.0,
+            "module_name": "great_expectations.rule_based_profiler.rule_based_profiler",
+            "name": "expect_column_mean_to_be_between",
+            "rules": [
+              {
+                "domain_builder": {
+                  "class_name": "ColumnDomainBuilder",
+                  "exclude_column_name_suffixes": null,
+                  "exclude_column_names": null,
+                  "exclude_semantic_types": null,
+                  "include_column_name_suffixes": null,
+                  "include_column_names": [
+                    "Intelligence"
+                  ],
+                  "include_semantic_types": null,
+                  "module_name": "great_expectations.rule_based_profiler.domain_builder.column_domain_builder",
+                  "semantic_type_filter_class_name": null,
+                  "semantic_type_filter_module_name": null
+                },
+                "expectation_configuration_builders": [
+                  {
+                    "class_name": "DefaultExpectationConfigurationBuilder",
+                    "column": "$domain.domain_kwargs.column",
+                    "condition": null,
+                    "expectation_type": "expect_column_mean_to_be_between",
+                    "max_value": "$parameter.mean_range_estimator.value[1]",
+                    "meta": {
+                      "profiler_details": "$parameter.mean_range_estimator.details"
+                    },
+                    "min_value": "$parameter.mean_range_estimator.value[0]",
+                    "module_name": "great_expectations.rule_based_profiler.expectation_configuration_builder.default_expectation_configuration_builder",
+                    "strict_max": "$variables.strict_max",
+                    "strict_min": "$variables.strict_min",
+                    "validation_parameter_builder_configs": [
+                      {
+                        "class_name": "NumericMetricRangeMultiBatchParameterBuilder",
+                        "enforce_numeric_metric": true,
+                        "estimator": "$variables.estimator",
+                        "evaluation_parameter_builder_configs": null,
+                        "false_positive_rate": "$variables.false_positive_rate",
+                        "include_estimator_samples_histogram_in_details": "$variables.include_estimator_samples_histogram_in_details",
+                        "metric_domain_kwargs": "$domain.domain_kwargs",
+                        "metric_multi_batch_parameter_builder_name": null,
+                        "metric_name": "column.mean",
+                        "metric_value_kwargs": null,
+                        "module_name": "great_expectations.rule_based_profiler.parameter_builder",
+                        "n_resamples": "$variables.n_resamples",
+                        "name": "mean_range_estimator",
+                        "quantile_bias_correction": "$variables.quantile_bias_correction",
+                        "quantile_bias_std_error_ratio_threshold": "$variables.quantile_bias_std_error_ratio_threshold",
+                        "quantile_statistic_interpolation_method": "$variables.quantile_statistic_interpolation_method",
+                        "random_seed": "$variables.random_seed",
+                        "reduce_scalar_metric": true,
+                        "replace_nan_with_zero": true,
+                        "round_decimals": "$variables.round_decimals",
+                        "truncate_values": "$variables.truncate_values"
+                      }
+                    ]
+                  }
+                ],
+                "parameter_builders": [],
+                "variables": {
+                  "estimator": "exact",
+                  "include_estimator_samples_histogram_in_details": false,
+                  "quantile_bias_std_error_ratio_threshold": null,
+                  "round_decimals": null,
+                  "strict_max": false,
+                  "strict_min": false,
+                  "truncate_values": {
+                    "lower_bound": null,
+                    "upper_bound": null
+                  }
+                }
+              }
+            ],
+            "variables": {}
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 44.50245499181669
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "auto": true,
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Intelligence",
+          "max_value": 32.92472154848241,
+          "min_value": 32.92472154848241,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_config": {
+            "class_name": "BaseRuleBasedProfiler",
+            "config_version": 1.0,
+            "module_name": "great_expectations.rule_based_profiler.rule_based_profiler",
+            "name": "expect_column_stdev_to_be_between",
+            "rules": [
+              {
+                "domain_builder": {
+                  "class_name": "ColumnDomainBuilder",
+                  "exclude_column_name_suffixes": null,
+                  "exclude_column_names": null,
+                  "exclude_semantic_types": null,
+                  "include_column_name_suffixes": null,
+                  "include_column_names": [
+                    "Intelligence"
+                  ],
+                  "include_semantic_types": null,
+                  "module_name": "great_expectations.rule_based_profiler.domain_builder.column_domain_builder",
+                  "semantic_type_filter_class_name": null,
+                  "semantic_type_filter_module_name": null
+                },
+                "expectation_configuration_builders": [
+                  {
+                    "class_name": "DefaultExpectationConfigurationBuilder",
+                    "column": "$domain.domain_kwargs.column",
+                    "condition": null,
+                    "expectation_type": "expect_column_stdev_to_be_between",
+                    "max_value": "$parameter.stdev_range_estimator.value[1]",
+                    "meta": {
+                      "profiler_details": "$parameter.stdev_range_estimator.details"
+                    },
+                    "min_value": "$parameter.stdev_range_estimator.value[0]",
+                    "module_name": "great_expectations.rule_based_profiler.expectation_configuration_builder.default_expectation_configuration_builder",
+                    "strict_max": "$variables.strict_max",
+                    "strict_min": "$variables.strict_min",
+                    "validation_parameter_builder_configs": [
+                      {
+                        "class_name": "NumericMetricRangeMultiBatchParameterBuilder",
+                        "enforce_numeric_metric": true,
+                        "estimator": "$variables.estimator",
+                        "evaluation_parameter_builder_configs": null,
+                        "false_positive_rate": "$variables.false_positive_rate",
+                        "include_estimator_samples_histogram_in_details": "$variables.include_estimator_samples_histogram_in_details",
+                        "metric_domain_kwargs": "$domain.domain_kwargs",
+                        "metric_multi_batch_parameter_builder_name": null,
+                        "metric_name": "column.standard_deviation",
+                        "metric_value_kwargs": null,
+                        "module_name": "great_expectations.rule_based_profiler.parameter_builder",
+                        "n_resamples": "$variables.n_resamples",
+                        "name": "stdev_range_estimator",
+                        "quantile_bias_correction": "$variables.quantile_bias_correction",
+                        "quantile_bias_std_error_ratio_threshold": "$variables.quantile_bias_std_error_ratio_threshold",
+                        "quantile_statistic_interpolation_method": "$variables.quantile_statistic_interpolation_method",
+                        "random_seed": "$variables.random_seed",
+                        "reduce_scalar_metric": true,
+                        "replace_nan_with_zero": true,
+                        "round_decimals": "$variables.round_decimals",
+                        "truncate_values": "$variables.truncate_values"
+                      }
+                    ]
+                  }
+                ],
+                "parameter_builders": [],
+                "variables": {
+                  "estimator": "exact",
+                  "include_estimator_samples_histogram_in_details": false,
+                  "round_decimals": null,
+                  "strict_max": false,
+                  "strict_min": false,
+                  "truncate_values": {
+                    "lower_bound": 0,
+                    "upper_bound": null
+                  }
+                }
+              }
+            ],
+            "variables": {}
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 32.92472154848241
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "auto": true,
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Intelligence",
+          "max_value": 50,
+          "min_value": 50,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_config": {
+            "class_name": "BaseRuleBasedProfiler",
+            "config_version": 1.0,
+            "module_name": "great_expectations.rule_based_profiler.rule_based_profiler",
+            "name": "expect_column_median_to_be_between",
+            "rules": [
+              {
+                "domain_builder": {
+                  "class_name": "ColumnDomainBuilder",
+                  "exclude_column_name_suffixes": null,
+                  "exclude_column_names": null,
+                  "exclude_semantic_types": null,
+                  "include_column_name_suffixes": null,
+                  "include_column_names": [
+                    "Intelligence"
+                  ],
+                  "include_semantic_types": null,
+                  "module_name": "great_expectations.rule_based_profiler.domain_builder.column_domain_builder",
+                  "semantic_type_filter_class_name": null,
+                  "semantic_type_filter_module_name": null
+                },
+                "expectation_configuration_builders": [
+                  {
+                    "class_name": "DefaultExpectationConfigurationBuilder",
+                    "column": "$domain.domain_kwargs.column",
+                    "condition": null,
+                    "expectation_type": "expect_column_median_to_be_between",
+                    "max_value": "$parameter.median_range_estimator.value[1]",
+                    "meta": {
+                      "profiler_details": "$parameter.median_range_estimator.details"
+                    },
+                    "min_value": "$parameter.median_range_estimator.value[0]",
+                    "module_name": "great_expectations.rule_based_profiler.expectation_configuration_builder.default_expectation_configuration_builder",
+                    "strict_max": "$variables.strict_max",
+                    "strict_min": "$variables.strict_min",
+                    "validation_parameter_builder_configs": [
+                      {
+                        "class_name": "NumericMetricRangeMultiBatchParameterBuilder",
+                        "enforce_numeric_metric": true,
+                        "estimator": "$variables.estimator",
+                        "evaluation_parameter_builder_configs": null,
+                        "false_positive_rate": "$variables.false_positive_rate",
+                        "include_estimator_samples_histogram_in_details": "$variables.include_estimator_samples_histogram_in_details",
+                        "metric_domain_kwargs": "$domain.domain_kwargs",
+                        "metric_multi_batch_parameter_builder_name": null,
+                        "metric_name": "column.median",
+                        "metric_value_kwargs": null,
+                        "module_name": "great_expectations.rule_based_profiler.parameter_builder",
+                        "n_resamples": "$variables.n_resamples",
+                        "name": "median_range_estimator",
+                        "quantile_bias_correction": "$variables.quantile_bias_correction",
+                        "quantile_bias_std_error_ratio_threshold": "$variables.quantile_bias_std_error_ratio_threshold",
+                        "quantile_statistic_interpolation_method": "$variables.quantile_statistic_interpolation_method",
+                        "random_seed": "$variables.random_seed",
+                        "reduce_scalar_metric": true,
+                        "replace_nan_with_zero": true,
+                        "round_decimals": "$variables.round_decimals",
+                        "truncate_values": "$variables.truncate_values"
+                      }
+                    ]
+                  }
+                ],
+                "parameter_builders": [],
+                "variables": {
+                  "estimator": "exact",
+                  "include_estimator_samples_histogram_in_details": false,
+                  "round_decimals": null,
+                  "strict_max": false,
+                  "strict_min": false,
+                  "truncate_values": {
+                    "lower_bound": null,
+                    "upper_bound": null
+                  }
+                }
+              }
+            ],
+            "variables": {}
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 50
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "auto": true,
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Strength",
+          "max_value": 32.61093910412226,
+          "min_value": 32.61093910412226,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_config": {
+            "class_name": "BaseRuleBasedProfiler",
+            "config_version": 1.0,
+            "module_name": "great_expectations.rule_based_profiler.rule_based_profiler",
+            "name": "expect_column_stdev_to_be_between",
+            "rules": [
+              {
+                "domain_builder": {
+                  "class_name": "ColumnDomainBuilder",
+                  "exclude_column_name_suffixes": null,
+                  "exclude_column_names": null,
+                  "exclude_semantic_types": null,
+                  "include_column_name_suffixes": null,
+                  "include_column_names": [
+                    "Strength"
+                  ],
+                  "include_semantic_types": null,
+                  "module_name": "great_expectations.rule_based_profiler.domain_builder.column_domain_builder",
+                  "semantic_type_filter_class_name": null,
+                  "semantic_type_filter_module_name": null
+                },
+                "expectation_configuration_builders": [
+                  {
+                    "class_name": "DefaultExpectationConfigurationBuilder",
+                    "column": "$domain.domain_kwargs.column",
+                    "condition": null,
+                    "expectation_type": "expect_column_stdev_to_be_between",
+                    "max_value": "$parameter.stdev_range_estimator.value[1]",
+                    "meta": {
+                      "profiler_details": "$parameter.stdev_range_estimator.details"
+                    },
+                    "min_value": "$parameter.stdev_range_estimator.value[0]",
+                    "module_name": "great_expectations.rule_based_profiler.expectation_configuration_builder.default_expectation_configuration_builder",
+                    "strict_max": "$variables.strict_max",
+                    "strict_min": "$variables.strict_min",
+                    "validation_parameter_builder_configs": [
+                      {
+                        "class_name": "NumericMetricRangeMultiBatchParameterBuilder",
+                        "enforce_numeric_metric": true,
+                        "estimator": "$variables.estimator",
+                        "evaluation_parameter_builder_configs": null,
+                        "false_positive_rate": "$variables.false_positive_rate",
+                        "include_estimator_samples_histogram_in_details": "$variables.include_estimator_samples_histogram_in_details",
+                        "metric_domain_kwargs": "$domain.domain_kwargs",
+                        "metric_multi_batch_parameter_builder_name": null,
+                        "metric_name": "column.standard_deviation",
+                        "metric_value_kwargs": null,
+                        "module_name": "great_expectations.rule_based_profiler.parameter_builder",
+                        "n_resamples": "$variables.n_resamples",
+                        "name": "stdev_range_estimator",
+                        "quantile_bias_correction": "$variables.quantile_bias_correction",
+                        "quantile_bias_std_error_ratio_threshold": "$variables.quantile_bias_std_error_ratio_threshold",
+                        "quantile_statistic_interpolation_method": "$variables.quantile_statistic_interpolation_method",
+                        "random_seed": "$variables.random_seed",
+                        "reduce_scalar_metric": true,
+                        "replace_nan_with_zero": true,
+                        "round_decimals": "$variables.round_decimals",
+                        "truncate_values": "$variables.truncate_values"
+                      }
+                    ]
+                  }
+                ],
+                "parameter_builders": [],
+                "variables": {
+                  "estimator": "exact",
+                  "include_estimator_samples_histogram_in_details": false,
+                  "round_decimals": null,
+                  "strict_max": false,
+                  "strict_min": false,
+                  "truncate_values": {
+                    "lower_bound": 0,
+                    "upper_bound": null
+                  }
+                }
+              }
+            ],
+            "variables": {}
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 32.61093910412226
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "auto": true,
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Total",
+          "max_value": 255,
+          "min_value": 255,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_config": {
+            "class_name": "BaseRuleBasedProfiler",
+            "config_version": 1.0,
+            "module_name": "great_expectations.rule_based_profiler.rule_based_profiler",
+            "name": "expect_column_median_to_be_between",
+            "rules": [
+              {
+                "domain_builder": {
+                  "class_name": "ColumnDomainBuilder",
+                  "exclude_column_name_suffixes": null,
+                  "exclude_column_names": null,
+                  "exclude_semantic_types": null,
+                  "include_column_name_suffixes": null,
+                  "include_column_names": [
+                    "Total"
+                  ],
+                  "include_semantic_types": null,
+                  "module_name": "great_expectations.rule_based_profiler.domain_builder.column_domain_builder",
+                  "semantic_type_filter_class_name": null,
+                  "semantic_type_filter_module_name": null
+                },
+                "expectation_configuration_builders": [
+                  {
+                    "class_name": "DefaultExpectationConfigurationBuilder",
+                    "column": "$domain.domain_kwargs.column",
+                    "condition": null,
+                    "expectation_type": "expect_column_median_to_be_between",
+                    "max_value": "$parameter.median_range_estimator.value[1]",
+                    "meta": {
+                      "profiler_details": "$parameter.median_range_estimator.details"
+                    },
+                    "min_value": "$parameter.median_range_estimator.value[0]",
+                    "module_name": "great_expectations.rule_based_profiler.expectation_configuration_builder.default_expectation_configuration_builder",
+                    "strict_max": "$variables.strict_max",
+                    "strict_min": "$variables.strict_min",
+                    "validation_parameter_builder_configs": [
+                      {
+                        "class_name": "NumericMetricRangeMultiBatchParameterBuilder",
+                        "enforce_numeric_metric": true,
+                        "estimator": "$variables.estimator",
+                        "evaluation_parameter_builder_configs": null,
+                        "false_positive_rate": "$variables.false_positive_rate",
+                        "include_estimator_samples_histogram_in_details": "$variables.include_estimator_samples_histogram_in_details",
+                        "metric_domain_kwargs": "$domain.domain_kwargs",
+                        "metric_multi_batch_parameter_builder_name": null,
+                        "metric_name": "column.median",
+                        "metric_value_kwargs": null,
+                        "module_name": "great_expectations.rule_based_profiler.parameter_builder",
+                        "n_resamples": "$variables.n_resamples",
+                        "name": "median_range_estimator",
+                        "quantile_bias_correction": "$variables.quantile_bias_correction",
+                        "quantile_bias_std_error_ratio_threshold": "$variables.quantile_bias_std_error_ratio_threshold",
+                        "quantile_statistic_interpolation_method": "$variables.quantile_statistic_interpolation_method",
+                        "random_seed": "$variables.random_seed",
+                        "reduce_scalar_metric": true,
+                        "replace_nan_with_zero": true,
+                        "round_decimals": "$variables.round_decimals",
+                        "truncate_values": "$variables.truncate_values"
+                      }
+                    ]
+                  }
+                ],
+                "parameter_builders": [],
+                "variables": {
+                  "estimator": "exact",
+                  "include_estimator_samples_histogram_in_details": false,
+                  "round_decimals": null,
+                  "strict_max": false,
+                  "strict_min": false,
+                  "truncate_values": {
+                    "lower_bound": null,
+                    "upper_bound": null
+                  }
+                }
+              }
+            ],
+            "variables": {}
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 255
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 10,
+    "success_percent": 80.0,
+    "successful_expectations": 8,
+    "unsuccessful_expectations": 2
+  },
+  "success": false
+}

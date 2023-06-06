@@ -1,0 +1,377 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "public.characters_stats",
+      "data_connector_name": "postgres_data_connector",
+      "datasource_name": "my_postgres"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230603T172311.436465Z"
+    },
+    "batch_spec": {
+      "batch_identifiers": {},
+      "data_asset_name": "public.characters_stats",
+      "data_asset_name_prefix": "",
+      "data_asset_name_suffix": "",
+      "include_schema_name": true,
+      "schema_name": "public",
+      "table_name": "characters_stats",
+      "type": "table"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "characters_stats_checkpoint_1",
+    "expectation_suite_name": "characters_stats_postgres_test_suite",
+    "great_expectations_version": "0.16.15",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2023-06-03T22:53:11.429650+05:30"
+    },
+    "validation_id": null,
+    "validation_time": "20230603T172311.444173Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Name"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "Nova"
+          }
+        ],
+        "partial_unexpected_list": [
+          "Nova",
+          "Nova"
+        ],
+        "unexpected_count": 2,
+        "unexpected_percent": 0.32733224222585927,
+        "unexpected_percent_nonmissing": 0.32733224222585927,
+        "unexpected_percent_total": 0.32733224222585927
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Name"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Alignment"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [
+          {
+            "count": 3,
+            "value": null
+          }
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 3,
+        "unexpected_percent": 0.4909983633387889
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Alignment",
+          "value_set": [
+            "good",
+            "bad",
+            "neutral"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "missing_count": 3,
+        "missing_percent": 0.4909983633387889,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Intelligence"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Strength"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Speed"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Durability"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Power"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Combat"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column": "Total"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 611,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_ordered_list",
+        "kwargs": {
+          "batch_id": "b5b81e40760150cd22b4b9155e9a9a2b",
+          "column_list": [
+            "Name",
+            "Alignment",
+            "Intelligence",
+            "Strength",
+            "Speed",
+            "Durability",
+            "Power",
+            "Combat",
+            "Total"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "Name",
+          "Alignment",
+          "Intelligence",
+          "Strength",
+          "Speed",
+          "Durability",
+          "Power",
+          "Combat",
+          "Total"
+        ]
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 12,
+    "success_percent": 83.33333333333334,
+    "successful_expectations": 10,
+    "unsuccessful_expectations": 2
+  },
+  "success": false
+}
