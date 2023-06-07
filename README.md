@@ -2,6 +2,8 @@
 
 This repository contains code and configuration files to perform data quality checks on Marvel superheroes data using the Great Expectations library.
 
+<img align="right" src="/Users/shubhamsharma/Downloads/gx-mark-160.png">
+
 
 `Great Expectations` is the leading tool for **validating**, **documenting**, and **profiling** your data to maintain quality and improve communication between teams.
 
